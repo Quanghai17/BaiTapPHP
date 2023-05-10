@@ -24,15 +24,15 @@ $user_info = get_a_record('danhsach', $user_id);
         <br>
         <h2>Edit user #<?= $user_id ?></h2>
         <form action="submit-edit.php" method="post">
-            <input type="id" name="hidden" value="<?= $user_info['id'] ?>">
+            <input type="hidden" name="id" value="<?= $user_info['id'] ?>">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="exampleInputEmail2">Họ tên</label>
+                        <label for="exampleInputEmail1">Họ tên</label>
                         <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="name" value="<?= $user_info['ds_name'] ?>">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword10">Đơn vị</label>
+                        <label for="exampleInputPassword1">Đơn vị</label>
                         <input required name="donvi" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị" value="<?= $user_info['ds_address'] ?>">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
