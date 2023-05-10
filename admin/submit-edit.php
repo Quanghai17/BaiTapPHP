@@ -7,6 +7,6 @@ $add_data = array(
     'ds_address' => escape($_POST['donvi']),
     'ds_desc' => escape($_POST['desc'])
 );
-save('danhsaach', $add_data);
+save('danhsach', $add_data);
 
 header('location:list.php');
