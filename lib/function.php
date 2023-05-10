@@ -79,7 +79,7 @@ function select_a_record($table, $options = array(), $select = '*')
 
 // ---------------------
 
-function ds_delete($name)
+function ds_delete($id)
 {
     global $linkconnectDB;
     $name = intval($name);
