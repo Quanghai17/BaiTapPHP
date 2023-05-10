@@ -43,7 +43,7 @@ function save($table, $data = array())
     global $linkconnectDB;
     foreach ($data as $key => $value) {
         $value = mysqli_real_escape_string($linkconnectDB, $value);
-        $values = "`$key`='$value'";
+        $values[] = "`$key`='$value'";
     }
     $id = intval($data['id']);
     if ($id > 0) {
