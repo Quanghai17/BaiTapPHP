@@ -3,7 +3,7 @@ require('config/database.php');
 function get_all($table, $options = array())
 {
     $select = isset($options['selecte']) ? $options['selecte'] : '*';
-    $where = isset($options['whereis']) ? 'WHERE ' . $options['whereis'] : '';
+    $where = isset($options['where']) ? 'WHERE ' . $options['where'] : '';
     $order_by = isset($options['order_by']) ? 'ORDER BY ' . $options['order_by'] : '';
     $limit = isset($options['offset']) && isset($options['limit']) ? 'LIMIT ' . $options['offset'] . ',' . $options['limit'] : '';
     global $linkconnectDB;
