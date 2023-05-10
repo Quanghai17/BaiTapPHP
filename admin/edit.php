@@ -28,7 +28,7 @@ $user_info = get_a_record('danhsach', $user_id);
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="exampleInputEmail2">Họ tên</label>
+                        <label for="exampleInputEmail1">Họ tên</label>
                         <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name" name="name" value="<?= $user_info['ds_name'] ?>">
                     </div>
                     <div class="form-group">
