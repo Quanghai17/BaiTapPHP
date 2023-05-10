@@ -13,7 +13,7 @@ $list_user = get_all('danhsach', $options);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh s?ch c?u h?i</title>
+    <title>Danh sách câu hỏi</title>
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" href="../assets/img/Huy_Hiệu_Đoàn.png" type="image/gif" sizes="16x16">
@@ -21,9 +21,9 @@ $list_user = get_all('danhsach', $options);
 
 <body>
     <div class="container">
-        <h2>Danh sáh</h2>
+        <h2>Danh sách</h2>
         <br>
-        <a href="add.php" class="btn btn-primary">Thêm mớ </a>
+        <a href="add.php" class="btn btn-primary">Thêm mới </a>
         <br>
         <table class="table">
             <thead>
@@ -44,8 +44,8 @@ $list_user = get_all('danhsach', $options);
                         <td><?= $user['ds_address'] ?></td>
                         <td><?= $user['ds_desc'] ?></td>
                         <td>
-                            <a href="edit.php?user_id=<?php echo $user['id']; ?>">S?a</a> |
-                            <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">X?a </a>
+                            <a href="edit.php?user_id=<?php echo $user['id']; ?>">Sửa</a> |
+                            <a onclick="return confirm('Are you sure to delete?')" href="delete.php?user_id=<?php echo $user['id']; ?>">Xóa </a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
