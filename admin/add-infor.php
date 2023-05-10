@@ -13,7 +13,7 @@ function add()
         'ds_address' => escape($_POST['ds_address']),
         'ds_desc' => escape($_POST['ds_desc'])
     );
-    save('danhsach', $add_data)
+    save('danhsach', $add_data);
 }
-add()
+add();
 header('location:add.php');
