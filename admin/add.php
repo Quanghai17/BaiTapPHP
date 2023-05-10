@@ -35,8 +35,8 @@ include('../lib/function.php');
                         <input required name="ds_address" type="texted" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị">
                     </div>
                     <div class="form-group" style="text-align: center;">
-                        <button style="text-align: center;" type="return" class="btn btn-primary">Gửi câu h?i</button>
-                        <a style="text-align: center;" href="list.php" class="btn btn-primary">Danh s?ch câu h?i</a>
+                        <button style="text-align: center;" type="return" class="btn btn-primary">Gửi câu hỏi</button>
+                        <a style="text-align: center;" href="list.php" class="btn btn-primary">Danh sách câu hỏi</a>
                     </div>
                 </div>
                 <div class="col-md-6">
