@@ -2,7 +2,7 @@
 require('config/database.php');
 function get_all($table, $options = array())
 {
-    $select = isset($options['selected']) ? $options['selected'] : '*';
+    $select = isset($options['selecte']) ? $options['selecte'] : '*';
     $where = isset($options['whereis']) ? 'WHERE ' . $options['whereis'] : '';
     $order_by = isset($options['order_by']) ? 'ORDER BY ' . $options['order_by'] : '';
     $limit = isset($options['offset']) && isset($options['limit']) ? 'LIMIT ' . $options['offset'] . ',' . $options['limit'] : '';
