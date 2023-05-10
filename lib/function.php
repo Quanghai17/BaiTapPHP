@@ -63,7 +63,7 @@ function select_a_record($table, $options = array(), $select = '*')
     $order_by = isset($options['order_by']) ? 'ORDER BY ' . $options['order_by'] : '';
     $limit = isset($options['offset']) && isset($options['limit']) ? 'LIMIT ' . $options['offset'] . ',' . $options['limit'] : '';
     global $linkconnectDB;
-    $sql = "SELECT $select FROM `table` $where $order_by $limit";
+    $sql = "SELECT $select FROM `$table` $where $order_by $limit";
     $query = mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
     $data = NULL;
     if (mysqli_num_rows($query) > 0) {
