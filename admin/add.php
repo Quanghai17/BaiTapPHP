@@ -41,8 +41,8 @@ include('../lib/function.php');
                 </div>
                 <div class="col-md-6">
                     <div class="form-group form-check">
-                        <label class="form-check-label" for="examplelyCheck1">Câu hỏi</label><br>
-                        <textarea required name="ds_descation" id="examplelyCheck1" cols="70" rows="6"></textarea>
+                        <label class="form-check-label" for="exampleCheck1">Câu hỏi</label><br>
+                        <textarea required name="ds_desc" id="exampleCheck1" cols="70" rows="6"></textarea>
                     </div>
                 </div>
         </form>
