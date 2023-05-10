@@ -27,11 +27,11 @@ include('../lib/function.php');
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Đơn vị</label>
+                        <label for="exampleInputEmail1">Họ tên</label>
                         <input required type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập họ tên" name="ds_name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Họ tên</label>
+                        <label for="exampleInputPassword1">Đơn vị</label>
                         <input required name="ds_address" type="texted" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị">
                     </div>
                     <div class="form-group" style="text-align: center;">
