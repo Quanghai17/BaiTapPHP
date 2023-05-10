@@ -30,8 +30,8 @@ $list_user = get_all('danhsach', $options);
                 <tr>
                     <th scope="col">stt</th>
                     <th scope="col">Tên</th>
-                    <th scope="col-8">Lớp</th>
-                    <th scope="col-9">Câu hỏi</th>
+                    <th scope="col">Lớp</th>
+                    <th scope="col">Câu hỏi</th>
                     <th>Thao tác</th>
                 </tr>
 
