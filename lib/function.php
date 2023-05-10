@@ -12,7 +12,7 @@ function get_all($table, $options = array())
     $data = array();
     if (mysqli_num_rows($query) > 0) {
         while ($row = mysqli_fetch_assoc($query)) {
-            $data[] = $row
+            $data[] = $row;
         }
         mysqli_free_result($query);
     }
