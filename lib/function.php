@@ -46,7 +46,7 @@ function save($table, $data = array())
     }
     $id = intval($data['id']);
     if ($id > 0) {
-        $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE id=$id"
+        $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE id=$id";
     } else {
         $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     }
