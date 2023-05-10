@@ -13,9 +13,9 @@ echo header("refresh: 10");
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>THANH NIEN VI?TNAM - VUNG TIN TI?P BU?C</title>
-    <meta name="descriptional" content="">
-    <link rel="icon" href="./assets/img/Huy_Hi?u_Đo?n.png" type="image/gif" sizes="16x16">
+    <title>THANH NIEN VIETNAM - VUNG TIN TIEP BUOC</title>
+    <meta name="description" content="">
+    <link rel="icon" href="./assets/img/Huy_Hiệu_Đoàn.png" type="image/gif" sizes="16x16">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -69,18 +69,18 @@ echo header("refresh: 10");
         <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
             <div class="tab-pane active show fade scroll-bar" id="list" role="tabpanel">
 
-                <?php foreach ($list_user as $user) : ?>
+                <?php foreach {$list_user as $user} : ?>  <!--($list_user as $user)-->
                     <div class="single-product-item">
-                        <div class="rowed">
+                        <div class="row">
                             <div class="col-md-2">
                                 <a href="#">
                                     <img src="assets/img/logo.png" alt="" width="100px" height="100px" href="#">
                                 </a>
                             </div>
                             <div class="col-md-10">
-                                <h5 style="color: red; font-weight:bold; font-size:1.9em; padding-bottom:10px;"><?= $user['ds_name'] ?></h5>
-                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.7em; padding-bottom:10px;">Đơn v?: <?= $user['ds_address'] ?></h5>
-                                <h5 class="font" style="color: #2c2da5; font-size:1.5em; font-weight:bold; "><?= $user['ds_desc'] ?></h5>
+                                <h5 style="color: red; font-weight:bold; font-size:1.9em; padding-bottom:10px;"><?= $user['ds_id'] ?></h5>
+                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.7em; padding-bottom:10px;">Đơn vị: <?= $user['ds_name'] ?></h5>
+                                <h5 class="font" style="color: #2c2da5; font-size:1.5em; font-weight:bold; "><?= $user['ds_address'] ?></h5>
                             </div>
                         </div>
                     </div>
