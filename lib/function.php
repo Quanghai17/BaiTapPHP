@@ -3,7 +3,7 @@ require('config/database.php');
 function get_all($table, $options = array())
 {
    
-    $select = isset($options['select']) ? $options['selected'] : '*';
+    $select = isset($options['select']) ? $options['select'] : '*';
     $where = isset($options['where']) ? 'WHERE ' . $options['where'] : '';
     $order_by = isset($options['order_by']) ? 'ORDER BY ' . $options['order_by'] : '';
     $limit = isset($options['offset']) && isset($options['limit']) ? 'LIMIT ' . $options['offset'] . ',' . $options['limit'] : '';
@@ -23,7 +23,7 @@ function get_a_record($table, $id, $select = '*')
 {
     $id = intval($id);
     global $linkconnectDB;
-    $sql = "SELECT $select FROM `$table` WHERE id=id"; 
+    $sql = "SELECT $select FROM `$table` WHERE id=$id";
     $query = mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
     $data = NULL;
     if (mysqli_num_rows($query) > 0) {
@@ -43,16 +43,16 @@ function save($table, $data = array())
     global $linkconnectDB;
     foreach ($data as $key => $value) {
         $value = mysqli_real_escape_string($linkconnectDB, $value);
-        $values = "`$key`='$value'";
+        $values[] = "`$key`='$value'";
     }
     $id = intval($data['id']);
     if ($id > 0) {
-        $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE name=$name";
+        $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE id=$id";
     } else {
-        $sql = "INSERT INTO `$table` SET " . implode(',', values);
+        $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     }
     mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
-    $id = (id > 0) ? $id : mysqli_insert_id($linkconnectDB);
+    $id = ($id > 0) ? $id : mysqli_insert_id($linkconnectDB);
     return $id;
 }
 
@@ -63,14 +63,14 @@ function select_a_record($table, $options = array(), $select = '*')
     $order_by = isset($options['order_by']) ? 'ORDER BY ' . $options['order_by'] : '';
     $limit = isset($options['offset']) && isset($options['limit']) ? 'LIMIT ' . $options['offset'] . ',' . $options['limit'] : '';
     global $linkconnectDB;
-    $sql = "SELECT $select FROM `table` $where $order_by $limit";
+    $sql = "SELECT $select FROM `$table` $where $order_by $limit";
     $query = mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
     $data = NULL;
     if (mysqli_num_rows($query) > 0) {
         $data = mysqli_fetch_assoc($query);
         mysqli_free_result($query);
     }
-    return $id;
+    return $data;
 }
 
 
@@ -79,10 +79,10 @@ function select_a_record($table, $options = array(), $select = '*')
 
 // ---------------------
 
-function ds_delete($name)
+function ds_delete($id)
 {
     global $linkconnectDB;
-    $name = intval($name);
-    $sql = "DELETE FROM danhsach WHERE name=$name";
+    $id = intval($id);
+    $sql = "DELETE FROM danhsach WHERE id=$id";
     mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
 }
