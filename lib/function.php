@@ -52,7 +52,7 @@ function save($table, $data = array())
         $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     }
     mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
-    $id = (id > 0) ? $id : mysqli_insert_id($linkconnectDB);
+    $id = ($id > 0) ? $id : mysqli_insert_id($linkconnectDB);
     return $id;
 }
 
