@@ -15,5 +15,5 @@ function add()
     );
     save('danhsach', $add_data);
 }
-add()
+add();
 header('location:add.php');
