@@ -82,7 +82,7 @@ function select_a_record($table, $options = array(), $select = '*')
 function ds_delete($id)
 {
     global $linkconnectDB;
-    $name = intval($name);
+    $id = intval($id);
     $sql = "DELETE FROM danhsach WHERE name=$name";
     mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
 }
