@@ -70,7 +70,7 @@ function select_a_record($table, $options = array(), $select = '*')
         $data = mysqli_fetch_assoc($query);
         mysqli_free_result($query);
     }
-    return $id;
+    return $data;
 }
 
 
