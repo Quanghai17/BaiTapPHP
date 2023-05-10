@@ -32,10 +32,10 @@ include('../lib/function.php');
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Đơn vị</label>
-                        <input required name="ds_address" type="texted" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị">
+                        <input required name="ds_address" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị">
                     </div>
                     <div class="form-group" style="text-align: center;">
-                        <button style="text-align: center;" type="return" class="btn btn-primary">Gửi câu hỏi</button>
+                        <button style="text-align: center;" type="submit" class="btn btn-primary">Gửi câu hỏi</button>
                         <a style="text-align: center;" href="list.php" class="btn btn-primary">Danh sách câu hỏi</a>
                     </div>
                 </div>
