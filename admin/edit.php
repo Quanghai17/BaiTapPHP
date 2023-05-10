@@ -24,7 +24,7 @@ $user_info = get_a_record('danhsach', $user_id);
         <br>
         <h2>Edit user #<?= $user_id ?></h2>
         <form action="submit-edit.php" method="post">
-            <input type="id" name="hidden" value="<?= $user_info['id'] ?>">
+            <input type="hidden" name="id" value="<?= $user_info['id'] ?>">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
