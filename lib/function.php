@@ -23,7 +23,7 @@ function get_a_record($table, $id, $select = '*')
 {
     $id = intval($id);
     global $linkconnectDB;
-    $sql = "SELECT $select FROM `$table` WHERE id=id"; 
+    $sql = "SELECT $select FROM `$table` WHERE id=$id";
     $query = mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
     $data = NULL;
     if (mysqli_num_rows($query) > 0) {
