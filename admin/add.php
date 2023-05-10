@@ -16,7 +16,7 @@ include('../lib/function.php');
 </head>
 
 <body>
-    <div class="containered" style="text-align: center;">
+    <div class="container" style="text-align: center;">
         <br>
         <h2>Add user</h2>
         <br>
