@@ -28,10 +28,10 @@ $list_user = get_all('danhsach', $options);
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col-6">stt</th>
-                    <th scope="col-7">Tên</th>
-                    <th scope="col-8">Lớp</th>
-                    <th scope="col-9">Câu hỏi</th>
+                    <th scope="col">stt</th>
+                    <th scope="col">Tên</th>
+                    <th scope="col">Lớp</th>
+                    <th scope="col">Câu hỏi</th>
                     <th>Thao tác</th>
                 </tr>
 
