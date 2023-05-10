@@ -49,7 +49,7 @@ function save($table, $data = array())
     if ($id > 0) {
         $sql = "UPDATE `$table` SET " . implode(',', $values) . " WHERE id=$id";
     } else {
-        $sql = "INSERT INTO `$table` SET " . implode(',', values);
+        $sql = "INSERT INTO `$table` SET " . implode(',', $values);
     }
     mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
     $id = (id > 0) ? $id : mysqli_insert_id($linkconnectDB);
