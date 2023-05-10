@@ -35,11 +35,11 @@ $user_info = get_a_record('danhsach', $user_id);
                         <label for="exampleInputPassword1">Đơn vị</label>
                         <input required name="donvi" type="text" class="form-control" id="exampleInputPassword1" placeholder="Nhập đơn vị" value="<?= $user_info['ds_address'] ?>">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submitt</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group mt-3 form-check">
-                        <label class="form-check-label" for="exampleCheck1">Câu h i</label><br>
+                        <label class="form-check-label" for="exampleCheck1">Câu hỏi</label><br>
                         <textarea required name="desc" id="exampleCheck1" cols="70" rows="6"><?= $user_info['ds_desc'] ?></textarea>
                     </div>
                 </div>
