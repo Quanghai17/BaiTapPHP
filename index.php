@@ -69,7 +69,7 @@ echo header("refresh: 11");
         <div class="ht-product-shop tab-content" style="margin-left: 400px; margin-top:80px; margin-right:20px;">
             <div class="tab-pane active show fade scroll-bar" id="list" role="tabpanel">
 
-                <?php foreach {$list_user as $user} : ?>  <!--($list_user as $user)-->
+                <?php foreach ($list_user as $user) : ?> 
                     <div class="single-product-item">
                         <div class="row">
                             <div class="col-md-2">
@@ -78,9 +78,9 @@ echo header("refresh: 11");
                                 </a>
                             </div>
                             <div class="col-md-10">
-                                <h5 style="color: red; font-weight:bold; font-size:1.9em; padding-bottom:10px;"><?= $user['ds_id'] ?></h5>
-                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.7em; padding-bottom:10px;">Đơn vị: <?= $user['ds_name'] ?></h5>
-                                <h5 class="font" style="color: #2c2da5; font-size:1.5em; font-weight:bold; "><?= $user['ds_address'] ?></h5>
+                                <h5 style="color: red; font-weight:bold; font-size:1.9em; padding-bottom:10px;"><?= $user['ds_name'] ?></h5>
+                                <h5 style="color: #2c2da5; font-weight:bold; font-size:1.7em; padding-bottom:10px;">Đơn vị: <?= $user['ds_address'] ?></h5>
+                                <h5 class="font" style="color: #2c2da5; font-size:1.5em; font-weight:bold; "><?= $user['ds_desc'] ?></h5>
                             </div>
                         </div>
                     </div>
