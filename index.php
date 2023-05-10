@@ -4,7 +4,7 @@ $options = array(
     'order_by' => 'id desc'
 );
 $list_user = get_all('danhsach', $options);
-echo header("refresh: 10");
+echo header("refresh: 11");
 
 ?>
 <!doctype html>
