@@ -83,6 +83,6 @@ function ds_delete($id)
 {
     global $linkconnectDB;
     $id = intval($id);
-    $sql = "DELETE FROM danhsach WHERE name=$name";
+    $sql = "DELETE FROM danhsach WHERE id=$id";
     mysqli_query($linkconnectDB, $sql) or die(mysqli_error($linkconnectDB));
 }
